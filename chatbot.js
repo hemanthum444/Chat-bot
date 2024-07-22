@@ -34,7 +34,7 @@ function getBotResponse(input) {
         "hi": "Hello!",
         "how are you?": "I'm just a bot, but I'm doing great!",
         "what is your name?": "I'm ChatBot.",
-        "what are you doing?":"I'm chatting with you.",
+        "what are you doing?": "I'm chatting with you.",
         "what do you do?": "I chat with people like you!",
         "bye": "Goodbye!",
         "what is the time?": `The current time is ${new Date().toLocaleTimeString()}.`,
