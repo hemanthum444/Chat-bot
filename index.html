@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Chatbot</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .chat-box {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+            max-height: 400px;
+            background-color: #f9f9fb;
+        }
+
+        .chat-box div {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+            max-width: 75%;
+        }
+
+        .user {
+            background-color: #d1e7ff;
+            align-self: flex-end;
+            text-align: right;
+        }
+
+        .bot {
+            background-color: #ececec;
+            align-self: flex-start;
+            text-align: left;
+        }
+
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .chat-input input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-right: 10px;
+            outline: none;
+            background-color: #f0f0f0;
+        }
+
+        .chat-input button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .chat-input button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            ChatBot
+        </div>
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i>Send</button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
